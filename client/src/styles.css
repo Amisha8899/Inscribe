@@ -27,6 +27,14 @@ body{
     border: none;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5) ;
 }
+.post{
+    left: 90%;
+    bottom: 6%;
+    position: fixed;
+    height: 30px;
+    width: 70px;
+    border-radius: 45%;
+}
 @page{
     margin: 1in;
 }
