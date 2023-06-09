@@ -13,9 +13,11 @@ const toolbar_options = [
     [{script:"sub"},{script:"super"}],
     [{align:[]}],
     ["image","blockquote","code-block"],
-    ["clean"],
+    ["clean","link","video"],
 ]
-
+const handlePost= () =>{
+    console.log("Content Posted to feeds");
+}
 export default function TextEditor(){
     const {id:documentId} = useParams();
     const [socket, setSocket] = useState()
@@ -76,7 +78,11 @@ export default function TextEditor(){
         setQuill(q) 
     },[])
   return (
+     <div>
     <div className='container' ref={wrapperRef}></div>
+    <button onClick={handlePost} className='post'>Post</button>
+    </div>
+    
   )
 }
 
